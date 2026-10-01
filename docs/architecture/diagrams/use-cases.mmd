@@ -1,0 +1,13 @@
+flowchart LR
+  O[Operador] --> UC1([UC-01 Autenticar e abrir caixa])
+  O --> UC2([UC-02 Vender e emitir talão])
+  O --> UC4([UC-04 Fechar turno])
+  G[Gerente] --> UC1
+  G --> UC2
+  G --> UC3([UC-03 Anular venda])
+  G --> UC5([UC-05 Ajustar stock])
+  G --> Reports([Consultar relatórios da loja])
+  A[Administrador] --> UC3
+  A --> UC5
+  A --> UC6([UC-06 Consultar cadeia e auditoria])
+  E[Avaliador / manutenção] --> UC7([UC-07 Inicializar, testar e fazer backup])

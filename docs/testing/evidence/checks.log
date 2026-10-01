@@ -1,0 +1,214 @@
+Running: ruff check src tests scripts
+All checks passed!
+Running: ruff format --check src tests scripts
+13 files already formatted
+Running: pytest -q --junitxml=artifacts/tests.xml
+............................................                             [100%]
+- generated xml file: C:\Users\Luís Simões da Cunha\Desktop\PoS\artifacts\tests.xml -
+44 passed in 11.79s
+Running: build --no-isolation
+* Getting build dependencies for sdist...
+running egg_info
+writing src\mercado_pos.egg-info\PKG-INFO
+writing dependency_links to src\mercado_pos.egg-info\dependency_links.txt
+writing requirements to src\mercado_pos.egg-info\requires.txt
+writing top-level names to src\mercado_pos.egg-info\top_level.txt
+reading manifest file 'src\mercado_pos.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.json' under directory 'docs'
+warning: no files found matching '*.xml' under directory 'docs'
+warning: no files found matching '*.png' under directory 'docs'
+warning: no files found matching '*.log' under directory 'docs'
+adding license file 'LICENSE'
+writing manifest file 'src\mercado_pos.egg-info\SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing src\mercado_pos.egg-info\PKG-INFO
+writing dependency_links to src\mercado_pos.egg-info\dependency_links.txt
+writing requirements to src\mercado_pos.egg-info\requires.txt
+writing top-level names to src\mercado_pos.egg-info\top_level.txt
+reading manifest file 'src\mercado_pos.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.json' under directory 'docs'
+warning: no files found matching '*.xml' under directory 'docs'
+warning: no files found matching '*.png' under directory 'docs'
+warning: no files found matching '*.log' under directory 'docs'
+adding license file 'LICENSE'
+writing manifest file 'src\mercado_pos.egg-info\SOURCES.txt'
+running check
+creating mercado_pos-0.1.0
+creating mercado_pos-0.1.0\.github
+creating mercado_pos-0.1.0\.github\workflows
+creating mercado_pos-0.1.0\docs
+creating mercado_pos-0.1.0\docs\architecture
+creating mercado_pos-0.1.0\docs\architecture\adr
+creating mercado_pos-0.1.0\docs\architecture\diagrams
+creating mercado_pos-0.1.0\docs\compliance
+creating mercado_pos-0.1.0\docs\project
+creating mercado_pos-0.1.0\docs\quality
+creating mercado_pos-0.1.0\docs\requirements
+creating mercado_pos-0.1.0\docs\security
+creating mercado_pos-0.1.0\docs\testing
+creating mercado_pos-0.1.0\scripts
+creating mercado_pos-0.1.0\src\mercado
+creating mercado_pos-0.1.0\src\mercado\static
+creating mercado_pos-0.1.0\src\mercado\templates
+creating mercado_pos-0.1.0\src\mercado_pos.egg-info
+creating mercado_pos-0.1.0\tests
+copying files to mercado_pos-0.1.0...
+copying .env.example -> mercado_pos-0.1.0
+copying CHANGELOG.md -> mercado_pos-0.1.0
+copying CONTRIBUTING.md -> mercado_pos-0.1.0
+copying LICENSE -> mercado_pos-0.1.0
+copying MANIFEST.in -> mercado_pos-0.1.0
+copying Prompt_Unificada_Projeto_Engenharia_Software_Mestrado.md -> mercado_pos-0.1.0
+copying README.md -> mercado_pos-0.1.0
+copying pyproject.toml -> mercado_pos-0.1.0
+copying requirements-dev.txt -> mercado_pos-0.1.0
+copying requirements.txt -> mercado_pos-0.1.0
+copying setup.ps1 -> mercado_pos-0.1.0
+copying start.ps1 -> mercado_pos-0.1.0
+copying .github\dependabot.yml -> mercado_pos-0.1.0\.github
+copying .github\pull_request_template.md -> mercado_pos-0.1.0\.github
+copying .github\workflows\ci.yml -> mercado_pos-0.1.0\.github\workflows
+copying docs\manual-installation.md -> mercado_pos-0.1.0\docs
+copying docs\manual-user.md -> mercado_pos-0.1.0\docs
+copying docs\technical-report.md -> mercado_pos-0.1.0\docs
+copying docs\architecture\api.md -> mercado_pos-0.1.0\docs\architecture
+copying docs\architecture\architecture.md -> mercado_pos-0.1.0\docs\architecture
+copying docs\architecture\adr\001-local-modular-monolith.md -> mercado_pos-0.1.0\docs\architecture\adr
+copying docs\architecture\adr\002-money-transactions-and-demo.md -> mercado_pos-0.1.0\docs\architecture\adr
+copying docs\architecture\diagrams\checkout.mmd -> mercado_pos-0.1.0\docs\architecture\diagrams
+copying docs\architecture\diagrams\data.mmd -> mercado_pos-0.1.0\docs\architecture\diagrams
+copying docs\architecture\diagrams\states.mmd -> mercado_pos-0.1.0\docs\architecture\diagrams
+copying docs\architecture\diagrams\system.mmd -> mercado_pos-0.1.0\docs\architecture\diagrams
+copying docs\architecture\diagrams\use-cases.mmd -> mercado_pos-0.1.0\docs\architecture\diagrams
+copying docs\compliance\standards-mapping.md -> mercado_pos-0.1.0\docs\compliance
+copying docs\project\lessons-learned.md -> mercado_pos-0.1.0\docs\project
+copying docs\project\project-plan.md -> mercado_pos-0.1.0\docs\project
+copying docs\project\risk-register.md -> mercado_pos-0.1.0\docs\project
+copying docs\quality\quality-metrics.md -> mercado_pos-0.1.0\docs\quality
+copying docs\quality\quality-model.md -> mercado_pos-0.1.0\docs\quality
+copying docs\quality\software-engineering-quality-report.md -> mercado_pos-0.1.0\docs\quality
+copying docs\quality\technical-debt.md -> mercado_pos-0.1.0\docs\quality
+copying docs\requirements\requirements.md -> mercado_pos-0.1.0\docs\requirements
+copying docs\requirements\traceability-matrix.md -> mercado_pos-0.1.0\docs\requirements
+copying docs\security\security.md -> mercado_pos-0.1.0\docs\security
+copying docs\security\threat-model.md -> mercado_pos-0.1.0\docs\security
+copying docs\testing\test-plan.md -> mercado_pos-0.1.0\docs\testing
+copying scripts\benchmark.py -> mercado_pos-0.1.0\scripts
+copying scripts\check.py -> mercado_pos-0.1.0\scripts
+copying scripts\e2e.py -> mercado_pos-0.1.0\scripts
+copying scripts\smoke_package.py -> mercado_pos-0.1.0\scripts
+copying src\mercado\__init__.py -> mercado_pos-0.1.0\src\mercado
+copying src\mercado\__main__.py -> mercado_pos-0.1.0\src\mercado
+copying src\mercado\db.py -> mercado_pos-0.1.0\src\mercado
+copying src\mercado\domain.py -> mercado_pos-0.1.0\src\mercado
+copying src\mercado\schema.sql -> mercado_pos-0.1.0\src\mercado
+copying src\mercado\seed.py -> mercado_pos-0.1.0\src\mercado
+copying src\mercado\static\app.css -> mercado_pos-0.1.0\src\mercado\static
+copying src\mercado\static\app.js -> mercado_pos-0.1.0\src\mercado\static
+copying src\mercado\static\favicon.svg -> mercado_pos-0.1.0\src\mercado\static
+copying src\mercado\static\fonts.css -> mercado_pos-0.1.0\src\mercado\static
+copying src\mercado\templates\index.html -> mercado_pos-0.1.0\src\mercado\templates
+copying src\mercado_pos.egg-info\PKG-INFO -> mercado_pos-0.1.0\src\mercado_pos.egg-info
+copying src\mercado_pos.egg-info\SOURCES.txt -> mercado_pos-0.1.0\src\mercado_pos.egg-info
+copying src\mercado_pos.egg-info\dependency_links.txt -> mercado_pos-0.1.0\src\mercado_pos.egg-info
+copying src\mercado_pos.egg-info\requires.txt -> mercado_pos-0.1.0\src\mercado_pos.egg-info
+copying src\mercado_pos.egg-info\top_level.txt -> mercado_pos-0.1.0\src\mercado_pos.egg-info
+copying tests\conftest.py -> mercado_pos-0.1.0\tests
+copying tests\test_operations.py -> mercado_pos-0.1.0\tests
+copying tests\test_sales.py -> mercado_pos-0.1.0\tests
+copying tests\test_security.py -> mercado_pos-0.1.0\tests
+copying src\mercado_pos.egg-info\SOURCES.txt -> mercado_pos-0.1.0\src\mercado_pos.egg-info
+Writing mercado_pos-0.1.0\setup.cfg
+Creating tar archive
+removing 'mercado_pos-0.1.0' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing src\mercado_pos.egg-info\PKG-INFO
+writing dependency_links to src\mercado_pos.egg-info\dependency_links.txt
+writing requirements to src\mercado_pos.egg-info\requires.txt
+writing top-level names to src\mercado_pos.egg-info\top_level.txt
+reading manifest file 'src\mercado_pos.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.json' under directory 'docs'
+warning: no files found matching '*.xml' under directory 'docs'
+warning: no files found matching '*.png' under directory 'docs'
+warning: no files found matching '*.log' under directory 'docs'
+adding license file 'LICENSE'
+writing manifest file 'src\mercado_pos.egg-info\SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build\lib\mercado
+copying src\mercado\db.py -> build\lib\mercado
+copying src\mercado\domain.py -> build\lib\mercado
+copying src\mercado\seed.py -> build\lib\mercado
+copying src\mercado\__init__.py -> build\lib\mercado
+copying src\mercado\__main__.py -> build\lib\mercado
+running egg_info
+writing src\mercado_pos.egg-info\PKG-INFO
+writing dependency_links to src\mercado_pos.egg-info\dependency_links.txt
+writing requirements to src\mercado_pos.egg-info\requires.txt
+writing top-level names to src\mercado_pos.egg-info\top_level.txt
+reading manifest file 'src\mercado_pos.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.json' under directory 'docs'
+warning: no files found matching '*.xml' under directory 'docs'
+warning: no files found matching '*.png' under directory 'docs'
+warning: no files found matching '*.log' under directory 'docs'
+adding license file 'LICENSE'
+writing manifest file 'src\mercado_pos.egg-info\SOURCES.txt'
+copying src\mercado\schema.sql -> build\lib\mercado
+creating build\lib\mercado\templates
+copying src\mercado\templates\index.html -> build\lib\mercado\templates
+creating build\lib\mercado\static
+copying src\mercado\static\app.css -> build\lib\mercado\static
+copying src\mercado\static\app.js -> build\lib\mercado\static
+copying src\mercado\static\favicon.svg -> build\lib\mercado\static
+copying src\mercado\static\fonts.css -> build\lib\mercado\static
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\mercado
+copying build\lib\mercado\db.py -> build\bdist.win-amd64\wheel\.\mercado
+copying build\lib\mercado\domain.py -> build\bdist.win-amd64\wheel\.\mercado
+copying build\lib\mercado\schema.sql -> build\bdist.win-amd64\wheel\.\mercado
+copying build\lib\mercado\seed.py -> build\bdist.win-amd64\wheel\.\mercado
+creating build\bdist.win-amd64\wheel\mercado\static
+copying build\lib\mercado\static\app.css -> build\bdist.win-amd64\wheel\.\mercado\static
+copying build\lib\mercado\static\app.js -> build\bdist.win-amd64\wheel\.\mercado\static
+copying build\lib\mercado\static\favicon.svg -> build\bdist.win-amd64\wheel\.\mercado\static
+copying build\lib\mercado\static\fonts.css -> build\bdist.win-amd64\wheel\.\mercado\static
+creating build\bdist.win-amd64\wheel\mercado\templates
+copying build\lib\mercado\templates\index.html -> build\bdist.win-amd64\wheel\.\mercado\templates
+copying build\lib\mercado\__init__.py -> build\bdist.win-amd64\wheel\.\mercado
+copying build\lib\mercado\__main__.py -> build\bdist.win-amd64\wheel\.\mercado
+running install_egg_info
+Copying src\mercado_pos.egg-info to build\bdist.win-amd64\wheel\.\mercado_pos-0.1.0-py3.10.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\mercado_pos-0.1.0.dist-info\WHEEL
+creating 'C:\\Users\\Luís Simões da Cunha\\Desktop\\PoS\\dist\\.tmp-mige2tpm\\mercado_pos-0.1.0-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
+adding 'mercado/__init__.py'
+adding 'mercado/__main__.py'
+adding 'mercado/db.py'
+adding 'mercado/domain.py'
+adding 'mercado/schema.sql'
+adding 'mercado/seed.py'
+adding 'mercado/static/app.css'
+adding 'mercado/static/app.js'
+adding 'mercado/static/favicon.svg'
+adding 'mercado/static/fonts.css'
+adding 'mercado/templates/index.html'
+adding 'mercado_pos-0.1.0.dist-info/licenses/LICENSE'
+adding 'mercado_pos-0.1.0.dist-info/METADATA'
+adding 'mercado_pos-0.1.0.dist-info/WHEEL'
+adding 'mercado_pos-0.1.0.dist-info/top_level.txt'
+adding 'mercado_pos-0.1.0.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+Successfully built mercado_pos-0.1.0.tar.gz and mercado_pos-0.1.0-py3-none-any.whl

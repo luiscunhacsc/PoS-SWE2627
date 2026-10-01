@@ -1,0 +1,28 @@
+sequenceDiagram
+  actor O as Operador
+  participant UI as Navegador
+  participant API as Flask
+  participant D as Domínio
+  participant DB as SQLite
+  O->>UI: Confirmar pagamento simulado
+  UI->>API: POST sales + CSRF + chave idempotente
+  API->>API: Autenticar e validar JSON/origem
+  API->>D: checkout(user, payload)
+  D->>DB: BEGIN IMMEDIATE
+  D->>DB: Consultar chave anterior
+  alt Retry idêntico
+    DB-->>D: Venda existente
+  else Nova tentativa
+    D->>DB: Ler turno, produtos e stock
+    D->>D: Validar permissão, quantidades e pagamento
+    alt Válida
+      D->>DB: Inserir venda e linhas; reduzir stock; movimentos; audit
+    else Falha
+      D->>DB: ROLLBACK
+      D-->>API: Erro 400 / 403 / 409
+    end
+  end
+  D->>DB: COMMIT quando sem erro
+  D-->>API: Snapshot do talão
+  API-->>UI: JSON com total e troco
+  UI-->>O: Mostrar talão e carrinho vazio

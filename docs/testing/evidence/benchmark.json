@@ -1,0 +1,23 @@
+{
+  "environment": "Windows-10-10.0.26200-SP0",
+  "python": "3.10.7",
+  "method": "Flask test client, sequential, 5 warm-ups then 100 reads, demo database",
+  "target_p95_ms": 200,
+  "results": {
+    "/api/products?store_id=1": {
+      "requests": 100,
+      "median_ms": 7.789,
+      "p95_ms": 9.702
+    },
+    "/api/dashboard?store_id=1": {
+      "requests": 100,
+      "median_ms": 7.947,
+      "p95_ms": 11.311
+    },
+    "/api/sales?store_id=1": {
+      "requests": 100,
+      "median_ms": 7.33,
+      "p95_ms": 8.43
+    }
+  }
+}

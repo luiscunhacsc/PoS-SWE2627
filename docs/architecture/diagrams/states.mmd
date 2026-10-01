@@ -1,0 +1,14 @@
+stateDiagram-v2
+  state Turno {
+    [*] --> Aberto: abrir com fundo >= 0
+    Aberto --> Fechado: próprio operador conta numerário
+    Fechado --> [*]
+  }
+  state Venda {
+    [*] --> Carrinho: estado apenas no navegador
+    Carrinho --> Validacao: confirmar pagamento
+    Validacao --> Carrinho: erro, sem persistência parcial
+    Validacao --> Concluida: commit atómico
+    Concluida --> Anulada: gerente/admin, motivo, turno aberto
+    Anulada --> [*]
+  }

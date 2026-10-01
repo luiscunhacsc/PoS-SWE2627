@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "wheel_import": "isolated from src",
+  "seed_sales": 180,
+  "backup_integrity": "ok",
+  "restored_api": "passed",
+  "bundled_assets": "passed"
+}

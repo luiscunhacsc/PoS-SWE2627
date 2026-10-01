@@ -1,0 +1,25 @@
+flowchart TB
+  Operator[Operador: vender e fechar caixa]
+  Manager[Gerente: stock e relatórios]
+  Admin[Administrador: cadeia e auditoria]
+  subgraph Browser[Posto de trabalho — fronteira não confiável]
+    UI[HTML + CSS + JavaScript]
+  end
+  Operator --> UI
+  Manager --> UI
+  Admin --> UI
+  subgraph Host[Computador local — processo único]
+    W[Waitress: 127.0.0.1:5000]
+    HTTP[Flask: sessão, CSRF, autorização, API]
+    Domain[Domínio: turnos, vendas, stock e dinheiro]
+    DB[(SQLite WAL: instance/mercado.sqlite3)]
+    Logs[Logs JSON para consola]
+  end
+  UI <-->|HTTP same-origin e cookie HttpOnly| W
+  W --> HTTP
+  HTTP --> Domain
+  HTTP -->|consultas| DB
+  Domain -->|transação única| DB
+  HTTP --> Logs
+  CLI[CLI init / backup] --> DB
+  DB -->|SQLite backup API| Backup[(Ficheiro de backup local)]

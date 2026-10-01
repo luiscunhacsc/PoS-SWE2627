@@ -1,0 +1,52 @@
+erDiagram
+  stores ||--o{ registers : possui
+  stores ||--o{ users : atribui
+  stores ||--o{ inventory : mantem
+  products ||--o{ inventory : tem
+  registers ||--o{ shifts : recebe
+  users ||--o{ shifts : opera
+  users ||--o{ sessions : autentica
+  shifts ||--o{ sales : regista
+  stores ||--o{ sales : vende
+  users ||--o{ sales : efetua
+  sales ||--|{ sale_items : inclui
+  products ||--o{ sale_items : origina
+  products ||--o{ stock_movements : movimenta
+  stores ||--o{ stock_movements : localiza
+  users ||--o{ stock_movements : autoriza
+  sales |o--o{ stock_movements : referencia
+  users |o--o{ audit : executa
+  products {
+    int id PK
+    string sku UK
+    string barcode UK
+    int price_cents
+    int tax_rate
+  }
+  inventory {
+    int store_id PK,FK
+    int product_id PK,FK
+    int quantity
+    int minimum
+  }
+  sales {
+    int id PK
+    int shift_id FK
+    int store_id FK
+    int user_id FK
+    string idempotency_key
+    string request_hash
+    string status
+    int total_cents
+    int tax_cents
+  }
+  shifts {
+    int id PK
+    int register_id FK
+    int user_id FK
+    string closed_at
+    int opening_cents
+    int expected_cents
+    int counted_cents
+    int difference_cents
+  }

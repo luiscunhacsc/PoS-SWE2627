@@ -1,0 +1,7 @@
+include README.md CHANGELOG.md CONTRIBUTING.md LICENSE .env.example
+include requirements*.txt *.ps1
+include Prompt_Unificada_Projeto_Engenharia_Software_Mestrado.md
+recursive-include docs *.md *.mmd *.json *.xml *.png *.log
+recursive-include tests *.py
+recursive-include scripts *.py
+recursive-include .github *.yml *.md

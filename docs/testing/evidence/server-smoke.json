@@ -1,0 +1,9 @@
+{
+  "health": {
+    "status": "ok",
+    "version": "0.1.0"
+  },
+  "index_status": 200,
+  "server": "Waitress",
+  "port": 5000
+}

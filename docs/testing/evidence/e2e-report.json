@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "browser": "msedge",
+  "steps": [
+    "Login admin e dashboard com dados reais da base de demonstração",
+    "Abertura de caixa; venda em numerário; troco de 1,11 EUR; talão",
+    "Anulação pelo administrador com motivo e reposição de stock",
+    "Venda por cartão simulado e fecho com diferença zero",
+    "Ajuste de inventário e consulta do movimento persistido",
+    "Navegação em vendas, relatórios, lojas e auditoria; sessão após reload",
+    "Viewport 390×844: dashboard e PoS sem overflow horizontal da página",
+    "Logout e login de operador: acesso a uma loja, sem gestão nem auditoria"
+  ],
+  "javascript_errors": []
+}
